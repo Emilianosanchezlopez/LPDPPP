@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Encuesta de Capacitación</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"  href="css/custom.css">
+    </head>
+    <body onload="localAlert()">
+        
+            
+            <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="images/mainbit.png" style="height:40px; top:-10px;position:relative;">
+      </a>
+	  <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Inicio</a></li>
+      <!--<li><a href="#">Actualiza tus datos</a></li>
+      <li><a href="#">Envíar datos</a></li>-->
+     
+    </ul>
+    </div>
+    <h4 class="navbar-text navbar-left">Encuesta de Evaluación del Programa de Capacitación</h4>
+  </div>
+</nav>
+            
+<div class="container">
+<div class="row">
+                
+
+
+                
+                <div class="col-lg-12">
+                    
+<!--información de Capacitación-->
+<div class="panel panel-primary">
+      <div class="panel-heading">Información sobre la capacitación recibida</div>
+      <div class="panel-body">
+        
+        <div class="col-lg-6">
+          
+        
+          <p>Tipo de Capacitación recibida</p>
+
+                    <form method="post" onsubmit="return writeUserData();">
+
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Curso" required>Curso</label>    
+    
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Exposición/Presentación">Exposición/Presentación</label>    
+    
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Reunión">Reunión</label>   
+     
+  
+         
+        </div>
+
+        <div class="col-lg-6">
+<div class="input-group">
+    <span class="input-group-addon">Nombre del tema</span>
+    <input id="nombre" type="text" class="form-control" name="msg" placeholder="Nombre del tema" required>
+  </div>
+          <hr>
+  </div>
+  <div class="col-lg-6">
+<div class="input-group">
+    <span class="input-group-addon">Fecha</span>
+    <input id="fecha" type="date" value="" required>
+</div>
+<div class="input-group">
+    <span class="input-group-addon">Lugar</span>
+    <input id="lugar" type="text" class="form-control" name="msg" placeholder="Lugar de la capacitación" required>
+  </div>
+  </div>
+  <div class="col-lg-6">
+
+<div class="input-group">
+    <span class="input-group-addon">Nombre del Expositor 1</span>
+    <input id="expo1" type="text" class="form-control" name="msg" placeholder="Nombre del expositor" required>
+  </div>
+<div class="input-group">
+    <span class="input-group-addon">Nombre del Expositor 2</span>
+    <input id="expo2" type="text" class="form-control" name="msg" placeholder="Si no hay escribir 'No aplica'" required>
+  </div>
+  </div>
+   
+      <!--<input id="subm1" type="submit" value="enviar">  
+    
+      <input type="submit" value="Enviar todo" onclick="submitAll();">  -->
+      </div>
+    </div></div>
+<!-- 1. PROGRAMA -->
+
+<div class="col-lg-12">
+ 
+<div class="panel panel-info">
+      <div class="panel-heading">1. PROGRAMA</div>
+      <div class="panel-body">
+    <p>1.1 ¿Se cumplió el objetivo de la capacitación?</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Malo">Malo</label>   
+      <!--<input id="subm2" type="submit" value="enviar"> -->
+     
+<hr>
+    <p>1.2 La continuidad de los temas fue:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Malo">Malo</label>   
+     
+<hr>
+    <p>1.3 Lo que aprendí en esta capacitación contribuirá para mejorar mi desempeño:</p>
+      
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Malo">Malo</label>   
+   
+      </div>
+</div>
+</div>
+<!-- 2. INSTRUCTOR/EXPOSITOR -->
+
+<div class="col-lg-12">
+  
+
+
+<div class="panel panel-info">
+      <div class="panel-heading">2. INSTRUCTOR/EXPOSITOR</div>
+      <div class="panel-body">
+
+  
+  <div class="col-lg-6">
+    
+  
+    <p>2.1 Presentó la información de manera clara, completa y correcta</p>
+      
+      <label class="radio-inline"><input type="radio" name="optradio-2-1" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-1" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-1" value="Malo">Malo</label>   
+    
+<hr>
+    <p>2.2 Su explicación ayudó a la comprensión de los temas de manera:</p>
+      
+      <label class="radio-inline"><input type="radio" name="optradio-2-2" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-2" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-2" value="Malo">Malo</label>   
+      
+<hr>
+    <p>2.3 Lo que aprendí en esta capacitación contribuirá para mejorar mi desempeño:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-3" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-3" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-3" value="Malo">Malo</label>   
+    
+<hr>
+    <p>2.4 Fomentó la participación de todo el grupo:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-4" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-4" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-4" value="Malo">Malo</label>   
+      
+<hr>
+    <p>2.5 La comunicación entre el grupo  y el instructor/expositor fue:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-5" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-5" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-5" value="Malo">Malo</label>   
+    
+<hr>
+  </div>
+  
+  <div class="col-lg-6">
+    
+  
+    <p>2.6 Integró bien los comentarios de los participantes:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-6" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-6" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-6" value="Malo">Malo</label>   
+   
+<hr>
+    <p>2.7 Despertó y mantuvo el interés del grupo:</p>
+      
+      <label class="radio-inline"><input type="radio" name="optradio-2-7" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-7" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-7" value="Malo">Malo</label>   
+    
+<hr>
+    <p>2.8 El inicio y termino de la sesión fueron a la hora estipulada:</p>
+      
+      <label class="radio-inline"><input type="radio" name="optradio-2-8" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-8" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-8" value="Malo">Malo</label>   
+    
+<hr>
+    <p>2.9 El instructor/expositor mostró buena actitud durante la capacitación:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-9" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-9" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-9" value="Malo">Malo</label>   
+    
+<hr>
+    <p>2.10 Fueron aclaradas las dudas que surgieron durante la capacitación:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-2-10" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-2-10" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-2-10" value="Malo">Malo</label>   
+      <hr>
+</div>
+    </div>
+</div>
+  </div>
+
+<div class="col-lg-12">
+  
+
+<!-- 3. METODOLOGÍA -->
+<div class="panel panel-info">
+      <div class="panel-heading">3. METODOLOGÍA</div>
+      <div class="panel-body">
+    <p>3.1 La organización del evento fue:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-3-1" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-3-1" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-3-1" value="Malo">Malo</label>   
+      <!--<input id="subm2" type="submit" value="enviar"> -->
+     
+<hr>
+    <p>3.2 Cubrió tus expectativas e intereses:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-3-2" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-3-2" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-3-2" value="Malo">Malo</label>   
+        
+      </div>
+</div>
+</div>
+
+<!-- 4. CONOCIMIENTO -->
+
+<div class="col-lg-6">
+  
+
+<div class="panel panel-info">
+      <div class="panel-heading">4. CONOCIMIENTO</div>
+      <div class="panel-body">
+    <p>4.1 Entendí claramente cuáles eran los puntos más importantes :</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-4-1" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-4-1" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-4-1" value="Malo">Malo</label>   
+      <!--<input id="subm2" type="submit" value="enviar"> -->
+     
+<hr>
+    <p>4.2 Las actividades que se implementaron en la capacitación facilitaron mi aprendizaje:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-4-2" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-4-2" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-4-2" value="Malo">Malo</label>   
+<hr>
+    <p>4.3 Los conocimientos adquiridos se aplican a mi actividad laboral:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-4-3" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-4-3" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-4-3" value="Malo">Malo</label>   
+        
+      </div>
+</div>
+</div>
+
+<!-- 5. MATERIALES Y EQUIPO DE APOYO -->
+
+<div class="col-lg-6">
+  
+
+<div class="panel panel-info">
+      <div class="panel-heading">5. MATERIALES Y EQUIPO DE APOYO</div>
+      <div class="panel-body">
+    <p>5.1 El material de apoyo (presentación, videos, manual u otros) es de utilidad:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-5-1" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-5-1" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-5-1" value="Malo">Malo</label>   
+      <!--<input id="subm2" type="submit" value="enviar"> -->
+     
+<hr>
+    <p>5.2 Los materiales de la capacitación estaban bien organizados  y claramente escritos:</p>
+     
+      <label class="radio-inline"><input type="radio" name="optradio-5-2" value="Bueno" required>Bueno</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-5-2" value="Regular">Regular</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-5-2" value="Malo">Malo</label>   
+        
+      </div>
+</div>
+</div>
+<!--COMENTARIOS GENERALES-->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+
+<div class="panel panel-success">
+      <div class="panel-heading">COMENTARIOS GENERALES</div>
+      <div class="panel-body">
+  
+     
+     <div class="col-lg-6">
+       
+     
+    <div class="form-group">
+      <label for="calif">Por favor indique la justificación de la calificación Regular o Malo de las situaciones arriba descritas:</label>
+      <textarea class="form-control" rows="2" id="calif" required></textarea>
+    </div>
+     
+<hr>
+     </div>
+    
+     <div class="col-lg-6">
+    <div class="form-group">
+      <label for="fort">Fortalezas: Por favor indique las partes de la capacitación recibida que aporten mayores beneficios para usted</label>
+      <textarea class="form-control" rows="2" id="calif" required></textarea>
+    </div>
+    <hr>
+     </div>
+    
+     <div class="col-lg-6">
+    <div class="form-group">
+      <label for="mejora">Áreas de mejora: Por favor indique las partes de la capacitación recibida que necesitan ser mejoradas y agregue sus sugerencias para hacerlo</label>
+      <textarea class="form-control" rows="2" id="calif" required></textarea>
+    </div>
+    <hr>
+     </div>
+
+
+     <div class="col-lg-6">
+    <div class="form-group">
+      <label for="otras">Que otras capacitaciones le gustaría que se impartieran</label>
+      <textarea class="form-control" rows="2" id="calif" required></textarea>
+    </div>
+    </div>
+      
+        
+      </div>
+</div>
+
+    <input id="mySubmit" type="submit" class="btn btn-primary"  value="Enviar datos" >
+      </form>
+
+
+      
+</div>
+  
+
+
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    
+    </body>
+   
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC9KLxh67Tv3M4fC0ZQIqqgrsmcu20LEXs",
+    authDomain: "capacitacionrh-d44eb.firebaseapp.com",
+    databaseURL: "https://capacitacionrh-d44eb.firebaseio.com",
+    projectId: "capacitacionrh-d44eb",
+    storageBucket: "capacitacionrh-d44eb.appspot.com",
+    messagingSenderId: "1018765639246"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+var x = function myFunc() {
+    var x = Math.floor((Math.random() * 500) + 1);
+   return x;
+};
+y = x();
+
+  function writeUserData(TipoCapacitacion, NombreCapacitacion, Fecha, Lugar, ExpositorUno, ExpositorDos){
+    return firebase.database().ref('encuestas/' + y ).set({
+  TipoCapacitacion: $('input[name=optradio-1]:checked').val(),
+  NombreCapacitacion:$('#nombre')["0"].value,
+  Fecha:$('#fecha')["0"].value,
+  Lugar: $('#lugar')["0"].value,
+  ExpositorUno: $('#expo1')["0"].value,
+  ExpositorDos: $('#expo2')["0"].value
+  });
+
+}
+
+
+
+function myFormValidation(){
+  document.getElementById("mySubmit").type = "";
+   
+
+}
+function localAlert() {
+ 
+  if(localStorage.Encuesta == 'Realizada'){
+alert("Usted ya realizó esta encuesta.");
+window.close();
+
+  }
+}
+
+        function getResults() {
+        
+        console.log('Tipo '+$('input[name=optradio-1]:checked').val() );
+        console.log('Nombre del curso '+$('#nombre')["0"].value );
+        console.log('Fecha '+$('#fecha')["0"].value );
+        console.log('Lugar '+$('#lugar')["0"].value );
+        console.log('Expositor 1 '+$('#expo1')["0"].value);
+        console.log('Expositor 2 '+$('#expo2')["0"].value);
+        console.log('1.1 '+$('input[name=optradio-1-1]:checked').val());
+        console.log('1.2 '+$('input[name=optradio-1-2]:checked').val());
+        console.log('1.3 '+$('input[name=optradio-1-3]:checked').val());
+        console.log('2.1 '+$('input[name=optradio-2-1]:checked').val());
+        console.log('2.2 '+$('input[name=optradio-2-2]:checked').val());
+        console.log('2.3 '+$('input[name=optradio-2-3]:checked').val());
+        console.log('2.4 '+$('input[name=optradio-2-4]:checked').val());
+        console.log('2.5 '+$('input[name=optradio-2-5]:checked').val());
+        console.log('2.6 '+$('input[name=optradio-2-6]:checked').val());
+        console.log('2.7 '+$('input[name=optradio-2-7]:checked').val());
+        console.log('2.8 '+$('input[name=optradio-2-8]:checked').val());
+        console.log('2.9 '+$('input[name=optradio-2-9]:checked').val());
+        console.log('2.10 '+$('input[name=optradio-2-10]:checked').val());
+         
+        alert('Su información se ha enviado correctamente');
+        }
+
+        
+        
+    </script>
+</html>
