@@ -330,7 +330,7 @@
      <div class="col-lg-6">
     <div class="form-group">
       <label for="fort">Fortalezas: Por favor indique las partes de la capacitación recibida que aporten mayores beneficios para usted</label>
-      <textarea class="form-control" rows="2" id="calif" required></textarea>
+      <textarea class="form-control" rows="2" id="fort" required></textarea>
     </div>
     <hr>
      </div>
@@ -338,7 +338,7 @@
      <div class="col-lg-6">
     <div class="form-group">
       <label for="mejora">Áreas de mejora: Por favor indique las partes de la capacitación recibida que necesitan ser mejoradas y agregue sus sugerencias para hacerlo</label>
-      <textarea class="form-control" rows="2" id="calif" required></textarea>
+      <textarea class="form-control" rows="2" id="mejora" required></textarea>
     </div>
     <hr>
      </div>
@@ -347,7 +347,7 @@
      <div class="col-lg-6">
     <div class="form-group">
       <label for="otras">Que otras capacitaciones le gustaría que se impartieran</label>
-      <textarea class="form-control" rows="2" id="calif" required></textarea>
+      <textarea class="form-control" rows="2" id="otros" required></textarea>
     </div>
     </div>
       
@@ -402,7 +402,31 @@ y = x();
   Fecha:$('#fecha')["0"].value,
   Lugar: $('#lugar')["0"].value,
   ExpositorUno: $('#expo1')["0"].value,
-  ExpositorDos: $('#expo2')["0"].value
+  ExpositorDos: $('#expo2')["0"].value,
+  A1: $('input[name=optradio-1-1]:checked').val(),
+  A2: $('input[name=optradio-1-2]:checked').val(),
+  A3: $('input[name=optradio-1-3]:checked').val(),
+  B1: $('input[name=optradio-2-1]:checked').val(),
+  B2: $('input[name=optradio-2-2]:checked').val(),
+  B3: $('input[name=optradio-2-3]:checked').val(),
+  B4: $('input[name=optradio-2-4]:checked').val(),
+  B5: $('input[name=optradio-2-5]:checked').val(),
+  B6: $('input[name=optradio-2-6]:checked').val(),
+  B7: $('input[name=optradio-2-7]:checked').val(),
+  B8: $('input[name=optradio-2-8]:checked').val(),
+  B9: $('input[name=optradio-2-9]:checked').val(),
+  B10: $('input[name=optradio-2-10]:checked').val(),
+  C1: $('input[name=optradio-3-1]:checked').val(),
+  C2: $('input[name=optradio-3-2]:checked').val(),
+  D1: $('input[name=optradio-4-1]:checked').val(),
+  D2: $('input[name=optradio-4-2]:checked').val(),
+  D3: $('input[name=optradio-4-3]:checked').val(),
+  E1: $('input[name=optradio-5-1]:checked').val(),
+  E2: $('input[name=optradio-5-2]:checked').val(),
+  ComCalificacion: $('#calif')["0"].value,
+  ComFortalezas: $('#fort')["0"].value,
+  ComMejora: $('#mejora')["0"].value,
+  ComOtros: $('#otros')["0"].value
   });
 
 }
@@ -425,26 +449,26 @@ window.close();
 
         function getResults() {
         
-        console.log('Tipo '+$('input[name=optradio-1]:checked').val() );
-        console.log('Nombre del curso '+$('#nombre')["0"].value );
-        console.log('Fecha '+$('#fecha')["0"].value );
-        console.log('Lugar '+$('#lugar')["0"].value );
-        console.log('Expositor 1 '+$('#expo1')["0"].value);
-        console.log('Expositor 2 '+$('#expo2')["0"].value);
-        console.log('1.1 '+$('input[name=optradio-1-1]:checked').val());
-        console.log('1.2 '+$('input[name=optradio-1-2]:checked').val());
-        console.log('1.3 '+$('input[name=optradio-1-3]:checked').val());
-        console.log('2.1 '+$('input[name=optradio-2-1]:checked').val());
-        console.log('2.2 '+$('input[name=optradio-2-2]:checked').val());
-        console.log('2.3 '+$('input[name=optradio-2-3]:checked').val());
-        console.log('2.4 '+$('input[name=optradio-2-4]:checked').val());
-        console.log('2.5 '+$('input[name=optradio-2-5]:checked').val());
-        console.log('2.6 '+$('input[name=optradio-2-6]:checked').val());
-        console.log('2.7 '+$('input[name=optradio-2-7]:checked').val());
-        console.log('2.8 '+$('input[name=optradio-2-8]:checked').val());
-        console.log('2.9 '+$('input[name=optradio-2-9]:checked').val());
-        console.log('2.10 '+$('input[name=optradio-2-10]:checked').val());
-         
+console.log('Tipo '+$('input[name=optradio-1]:checked').val() );
+console.log('Nombre del curso '+ $('#nombre')["0"].value );
+console.log('Fecha '+$('#fecha')["0"].value );
+console.log('Lugar '+$('#lugar')["0"].value );
+console.log('Expositor 1 '+$('#expo1')["0"].value);
+console.log('Expositor 2 '+$('#expo2')["0"].value);
+console.log('1.1 '+ $('input[name=optradio-1-1]:checked').val() );
+console.log('1.2 '+ $('input[name=optradio-1-2]:checked').val() );
+console.log('1.3 '+ $('input[name=optradio-1-3]:checked').val() );
+console.log('2.1 '+ $('input[name=optradio-2-1]:checked').val() );
+console.log('2.2 '+ $('input[name=optradio-2-2]:checked').val() );
+console.log('2.3 '+ $('input[name=optradio-2-3]:checked').val() );
+console.log('2.4 '+ $('input[name=optradio-2-4]:checked').val() );
+console.log('2.5 '+ $('input[name=optradio-2-5]:checked').val() );
+console.log('2.6 '+ $('input[name=optradio-2-6]:checked').val() );
+console.log('2.7 '+ $('input[name=optradio-2-7]:checked').val() );
+console.log('2.8 '+ $('input[name=optradio-2-8]:checked').val() );
+console.log('2.9 '+ $('input[name=optradio-2-9]:checked').val() );
+console.log('2.10 '+ $('input[name=optradio-2-10]:checked').val() );
+
         alert('Su información se ha enviado correctamente');
         }
 
