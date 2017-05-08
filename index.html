@@ -390,13 +390,24 @@
   // Get a reference to the database service
   var database = firebase.database();
 var x = function myFunc() {
-    var x = Math.floor((Math.random() * 500) + 1);
-   return x;
+  //   var x = Math.floor((Math.random() * 500) + 1);
+  //  return x;
+
+var x = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 9; i++ )
+    
+        x += possible.charAt(Math.floor(Math.random() * possible.length));
+        
+// document.getElementById("demo2").innerHTML = x;
+    return x;
+
 };
 y = x();
 
   function writeUserData(TipoCapacitacion, NombreCapacitacion, Fecha, Lugar, ExpositorUno, ExpositorDos){
-    return firebase.database().ref('encuestas/' + y ).set({
+    return firebase.database().ref('encuestas/' +'encuesta'+ y ).set({
   TipoCapacitacion: $('input[name=optradio-1]:checked').val(),
   NombreCapacitacion:$('#nombre')["0"].value,
   Fecha:$('#fecha')["0"].value,
