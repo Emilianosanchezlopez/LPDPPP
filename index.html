@@ -75,7 +75,7 @@
   <div class="col-lg-6">
 <div class="input-group">
     <span class="input-group-addon">Fecha</span>
-    <input id="fecha" type="date" value="" required>
+    <input id="fecha" type="date" value="2017-05-18" disabled>
 </div>
 <div class="input-group">
     <span class="input-group-addon">Lugar</span>
@@ -406,7 +406,7 @@ var x = "";
 y = x();
 
   function writeUserData(TipoCapacitacion, NombreCapacitacion, Fecha, Lugar, ExpositorUno, ExpositorDos){
-    return firebase.database().ref('encuestas/' +'LFPDPPP'+ y ).set({
+    return firebase.database().ref('LFPDPPP/' +'encuesta'+ y ).set({
   TipoCapacitacion: $('input[name=optradio-1]:checked').val(),
   NombreCapacitacion:$('#nombre')["0"].value,
   Fecha:$('#fecha')["0"].value,
