@@ -49,27 +49,26 @@
       <div class="panel-heading">Información sobre la capacitación recibida</div>
       <div class="panel-body">
         
+                    <form method="get" onsubmit="return writeUserData();">
         <div class="col-lg-6">
           
         
           <p>Tipo de Capacitación recibida</p>
 
-                    <form method="get" onsubmit="return writeUserData();">
 
-      <label class="radio-inline"><input type="radio" name="optradio-1" value="Curso" required>Curso</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Curso" checked disabled>Curso</label>    
     
-      <label class="radio-inline"><input type="radio" name="optradio-1" value="Exposición/Presentación">Exposición/Presentación</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Exposición/Presentación" disabled>Exposición/Presentación</label>    
     
-      <label class="radio-inline"><input type="radio" name="optradio-1" value="Reunión">Reunión</label>   
-     
+      <label class="radio-inline"><input type="radio" name="optradio-1" value="Reunión" disabled>Reunión</label> 
   
          
         </div>
-
+<hr class="hidden-lg">
         <div class="col-lg-6">
 <div class="input-group">
     <span class="input-group-addon">Nombre del tema</span>
-    <input id="nombre" type="text" class="form-control" name="msg" placeholder="Nombre del tema" required>
+    <input id="nombre" type="text" class="form-control" name="msg" value="LFPDPPP y Derechos ARCO" disabled>
   </div>
           <hr>
   </div>
@@ -80,18 +79,18 @@
 </div>
 <div class="input-group">
     <span class="input-group-addon">Lugar</span>
-    <input id="lugar" type="text" class="form-control" name="msg" placeholder="Lugar de la capacitación" required>
+    <input id="lugar" type="text" class="form-control" name="msg" value="Grupo ROM" disabled>
   </div>
   </div>
   <div class="col-lg-6">
 
 <div class="input-group">
     <span class="input-group-addon">Nombre del Expositor 1</span>
-    <input id="expo1" type="text" class="form-control" name="msg" placeholder="Nombre del expositor" required>
+    <input id="expo1" type="text" class="form-control" name="msg" value="Alma Rosa Oliva Guerrero" disabled>
   </div>
 <div class="input-group">
     <span class="input-group-addon">Nombre del Expositor 2</span>
-    <input id="expo2" type="text" class="form-control" name="msg" placeholder="Si no hay escribir 'No aplica'" required>
+    <input id="expo2" type="text" class="form-control" name="msg" value="No aplica" disabled>
   </div>
   </div>
    
@@ -407,7 +406,7 @@ var x = "";
 y = x();
 
   function writeUserData(TipoCapacitacion, NombreCapacitacion, Fecha, Lugar, ExpositorUno, ExpositorDos){
-    return firebase.database().ref('encuestas/' +'encuesta'+ y ).set({
+    return firebase.database().ref('encuestas/' +'LFPDPPP'+ y ).set({
   TipoCapacitacion: $('input[name=optradio-1]:checked').val(),
   NombreCapacitacion:$('#nombre')["0"].value,
   Fecha:$('#fecha')["0"].value,
