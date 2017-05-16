@@ -49,7 +49,7 @@
       <div class="panel-heading">Información sobre la capacitación recibida</div>
       <div class="panel-body">
         
-                    <form method="get" onsubmit="return !!(writeUserData() & alerta());">
+                    <form id="myForm" method="get" onsubmit="return !!(writeUserData() & alerta());">
         <div class="col-lg-6">
           
         
@@ -443,6 +443,7 @@ y = x();
 
 function alerta() {
   alert("Gracias por responder a esta encuesta, su información se ha enviado correctamente.");
+  document.getElementById('myForm').reset();
 }
 
 function myFormValidation(){
