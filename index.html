@@ -54,40 +54,40 @@
       <div class="panel-body">
     <p>1. ¿Sabías que  la Ley Federal de Protección de Datos Personales te protege por medio de los Derechos ARCO?</p>
      
-      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Bueno" required>no tengo el conocimiento</label>    
-      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Regular">poco conocimiento </label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Malo">con conocimiento</label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="Malo">mucho conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="no tengo el conocimiento" required>no tengo el conocimiento</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="poco conocimiento">poco conocimiento </label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="con conocimiento">con conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-1" value="mucho comocimiento">mucho conocimiento</label>   
      
 <hr>
     <p>2. ¿Tienes conocimiento de que es el Aviso de Privacidad y cuál es su contenido?</p>
      
-      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Bueno" required>no tengo el conocimiento</label>    
-      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Regular">poco conocimiento </label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Malo">con conocimiento</label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="Malo">mucho conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="no tengo el conocimiento" required>no tengo el conocimiento</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="poco conocimiento">poco conocimiento </label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="con conocimiento">con conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-2" value="mucho comocimiento">mucho conocimiento</label>   
      
 <hr>
     <p>3.	¿Conoces los riesgos de no proteger los Datos Personales que obtenemos de nuestros clientes?</p>
       
-      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Bueno" required>no tengo el conocimiento</label>    
-      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Regular">poco conocimiento </label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Malo">con conocimiento</label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="Malo">mucho conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="no tengo el conocimiento" required>no tengo el conocimiento</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="poco conocimiento">poco conocimiento </label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="con conocimiento">con conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-3" value="mucho comocimiento">mucho conocimiento</label>   
 <hr>
     <p>4.	¿Tienes conocimiento de los Datos Personales que el área a la que perteneces “obtiene”?</p>
       
-      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="Bueno" required>no tengo el conocimiento</label>    
-      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="Regular">poco conocimiento </label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="Malo">con conocimiento</label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="Malo">mucho conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="no tengo el conocimiento" required>no tengo el conocimiento</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="poco conocimiento">poco conocimiento </label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="con conocimiento">con conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-4" value="mucho comocimiento">mucho conocimiento</label>   
 <hr>
     <p>5.	¿Conoces como ejercer tus Derechos ARCO?</p>
       
-      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="Bueno" required>no tengo el conocimiento</label>    
-      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="Regular">poco conocimiento </label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="Malo">con conocimiento</label>   
-      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="Malo">mucho conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="no tengo el conocimiento" required>no tengo el conocimiento</label>    
+      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="poco conocimiento">poco conocimiento </label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="con conocimiento">con conocimiento</label>   
+      <label class="radio-inline"><input type="radio" name="optradio-1-5" value="mucho comocimiento">mucho conocimiento</label>   
    
       </div>
 </div>
@@ -146,38 +146,15 @@ var x = "";
 };
 y = x();
 
-  function writeUserData(TipoCapacitacion, NombreCapacitacion, Fecha, Lugar, ExpositorUno, ExpositorDos){
-    return firebase.database().ref('LFPDPPP/' +'encuesta'+ y ).set({
-  TipoCapacitacion: $('input[name=optradio-1]:checked').val(),
-  NombreCapacitacion:$('#nombre')["0"].value,
-  Fecha:$('#fecha')["0"].value,
-  Lugar: $('#lugar')["0"].value,
-  ExpositorUno: $('#expo1')["0"].value,
-  ExpositorDos: $('#expo2')["0"].value,
+  function writeUserData(A1, A2, A3, A4, A5){
+    return firebase.database().ref('LEY/' +'encuesta'+ y ).set({
+  
   A1: $('input[name=optradio-1-1]:checked').val(),
   A2: $('input[name=optradio-1-2]:checked').val(),
   A3: $('input[name=optradio-1-3]:checked').val(),
-  B1: $('input[name=optradio-2-1]:checked').val(),
-  B2: $('input[name=optradio-2-2]:checked').val(),
-  B3: $('input[name=optradio-2-3]:checked').val(),
-  B4: $('input[name=optradio-2-4]:checked').val(),
-  B5: $('input[name=optradio-2-5]:checked').val(),
-  B6: $('input[name=optradio-2-6]:checked').val(),
-  B7: $('input[name=optradio-2-7]:checked').val(),
-  B8: $('input[name=optradio-2-8]:checked').val(),
-  B9: $('input[name=optradio-2-9]:checked').val(),
-  B10: $('input[name=optradio-2-10]:checked').val(),
-  C1: $('input[name=optradio-3-1]:checked').val(),
-  C2: $('input[name=optradio-3-2]:checked').val(),
-  D1: $('input[name=optradio-4-1]:checked').val(),
-  D2: $('input[name=optradio-4-2]:checked').val(),
-  D3: $('input[name=optradio-4-3]:checked').val(),
-  E1: $('input[name=optradio-5-1]:checked').val(),
-  E2: $('input[name=optradio-5-2]:checked').val(),
-  ComCalificacion: $('#calif')["0"].value,
-  ComFortalezas: $('#fort')["0"].value,
-  ComMejora: $('#mejora')["0"].value,
-  ComOtros: $('#otros')["0"].value
+  A4: $('input[name=optradio-1-4]:checked').val(),
+  A5: $('input[name=optradio-1-5]:checked').val(),
+ 
   });
 
 }
